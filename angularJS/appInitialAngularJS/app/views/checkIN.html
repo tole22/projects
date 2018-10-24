@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>CheckIN</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
+
+<body>
+    <select name="" id="" ng-model="list.selectedProduct">
+        <option ng-repeat="product in list.products" value="{{product.id}}">{{product.name}}</option>
+    </select>
+    <input type="text" ng-model="list.count">
+    <input type="button" value="ADD" ng-click="list.addToCart()">
+
+    <table cellspacing="0">
+        <thead>
+            <tr>
+                <td>Product</td>
+                <td>Price</td>
+                <td>Count</td>
+                <td>Total</td>
+            </tr>
+        </thead>
+        <tr ng-repeat="product in list.cart">
+            <td>{{product.name}}</td>
+            <td>{{product.price}}</td>
+            <td>{{product.count}}</td>
+            <td>{{product.total}}</td>
+        </tr>
+        <tr>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td>{{list.getTotalCart()}}</td>
+        </tr>
+    </table>
+</body>
+
+</html>
