@@ -1,0 +1,13 @@
+<div class="container" ng-controller="PlaylistCtrl">
+    <h1>List</h1>
+    <ul>
+        <li ng-repeat="titulo in playlist"> {{ titulo }} </li>
+    </ul>
+    <h1>Delete</h1>
+    <ul>
+        <li ng-repeat="titulo in playlist">
+            {{ titulo }}
+            <a class="button" href="#!/playlist" ng-click="deleteFromPlaylist($index)">&times;</a>
+        </li>
+    </ul>
+</div>
