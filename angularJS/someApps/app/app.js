@@ -7,7 +7,8 @@ angular
     "myApp.view1",
     "myApp.view2",
     "myApp.version",
-    "myApp.playlist"
+    "myApp.playlist",
+    "myApp.promises"
   ])
   .config([
     "$locationProvider",

@@ -11,8 +11,13 @@ angular.module("myApp").factory("Playlist", [
       "This Is Where You Can Reach Me Now",
       "Iris (Hold Me Close)",
       "The Troubles",
-      "Volcano"
+      "Volcano",
+      "asda",
+      "asdasd"
     ];
+    for(i=0; i<9999; i++){
+        playlist.push(i.toString());
+    }
     var list = function() {
       return playlist;
     };
