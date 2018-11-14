@@ -9,6 +9,7 @@ import { Task } from '../Task';
   providedIn: 'root'
 })
 export class TasksService {
+  // domain: string = 'www.mydomainapi.com/';
   domain = 'http://localhost:3000';
   constructor(private http: HttpClient) { }
 
@@ -17,15 +18,15 @@ export class TasksService {
     .pipe(map(res => res));
   }
   addTask(newTask: Task){
-    return this.http.post(`${this.domain}/api/tasks`, newTask)
+    return this.http.post<Task>(`${this.domain}/api/tasks`, newTask)
     .pipe(map(res => res));
   }
   deleteTask(id){
-    return this.http.delete(`${this.domain}/api/tasks/${id}`)
+    return this.http.delete<Task>(`${this.domain}/api/tasks/${id}`)
     .pipe(map(res => res));
   }
   updateTask(newTask){
-    return this.http.put(`${this.domain}/api/tasks/${newTask.id}`, newTask)
+    return this.http.put<Task>(`${this.domain}/api/tasks/${newTask._id}`, newTask)
     .pipe(map(res => res));
   }
 }

@@ -1,3 +1,4 @@
+//////////////////////API REST//////////////////////////////////
 //create package.json
 npm init        
 
@@ -12,7 +13,7 @@ npm run dev
 
 run mongo DB :    mongod    (admin permitions)
 
-////////////ANGULAR///////////////////////////
+//////////////////////ANGULAR///////////////////////////
 
 CD src
 
@@ -46,12 +47,17 @@ ej: ng g c components/tasks
 ng g s nameService
 ej: ng g s taskService
 
-//install bootstrap
+//install bootstrap, add dependency to angular.json  element styles: bootstrap.css
 npm i bootstrap
 npm i bootstrap@next  (newbest version)
+
+//install font awesome, add dependency to angular.json  element styles: font-awesome.css
+npm install font-awesome --save
 
 
 //////////TO MAKE THE APP WORKING
 2 consoles:
- 1- /mean-app/ :  npm start   port:3000
+ 1- /mean-app/ :  npm run dev   port:3000        //develop mode auto save changes of the code
  2- /mean-app/src/client/  : ng serve      port:4200
+
+Don't forget start the mongo data base with command(admin) mongod
