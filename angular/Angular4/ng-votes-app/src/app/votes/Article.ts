@@ -15,4 +15,12 @@ export class Article {
   voteDown(): void {
     this.votes--;
   }
+  domain(): string {
+    try {
+      const link = this.link.split('//')[1];
+      return link.split('/')[0];
+    } catch (err) {
+
+    }
+  }
 }

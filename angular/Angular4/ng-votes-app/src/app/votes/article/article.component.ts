@@ -7,7 +7,8 @@ import { Article } from '../Article';
     class: 'row'
   },
   templateUrl: './article.component.html',
-  styleUrls: ['./article.component.css']
+  styleUrls: ['./article.component.css'],
+  inputs: ['article']
 })
 export class ArticleComponent implements OnInit {
   article: Article;
@@ -17,11 +18,14 @@ export class ArticleComponent implements OnInit {
   ngOnInit() {
   }
 
-  voteUp() {
+  voteUp(): boolean {
     this.article.voteUp();
+    return false;
   }
-  voteDown() {
+  voteDown(): boolean {
     this.article.voteDown();
+    return false;
   }
+
 
 }

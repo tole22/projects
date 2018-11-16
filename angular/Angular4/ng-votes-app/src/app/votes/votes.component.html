@@ -11,5 +11,10 @@
   <button class="ui primary button" type="submit" (click)="addArticle(newtitle, newlink)">Add a link</button>
 </form>
 
+<div class="ui">
+  <app-article *ngFor="let article of sortedArticles(); let i = index"
+    [article]="article">
+  </app-article>
+</div>
 
-<app-article></app-article>
+

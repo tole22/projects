@@ -3,7 +3,7 @@
     <div class="ui statistics">
       <div class="statistic">
         <div class="value">
-          <i class="book icon"></i>{{ votes }}
+          <i class="book icon"></i>{{ article.votes }}
         </div>
         <div class="label">
           Points
@@ -12,6 +12,23 @@
     </div>
   </div>
   <div class="twelve wide column">
-    .meta
+      <a class="ui large header" href="{{ article.link }}">
+        {{ article.title }}
+      </a>
+      <div class="meta">
+        {{ article.domain() }}
+      </div>
+      <ul class="ui big hoizontal list">
+        <li>
+          <a href (click)="voteUp()">
+            <i class="arrow up icon"></i> UpVote
+          </a>
+        </li>
+        <li>
+          <a href (click)="voteDown()">
+            <i class="arrow down icon"></i> DownVote
+          </a>
+        </li>
+      </ul>
   </div>
 </div>
