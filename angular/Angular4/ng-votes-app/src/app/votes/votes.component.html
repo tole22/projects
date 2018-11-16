@@ -1,0 +1,15 @@
+<form class="ui form">
+  <h3 class="ui header ">{{ title }}</h3>
+  <div class="field">
+    <label for="title">Title: </label>
+    <input #newtitle type="text" name="title" placeholder="Add a tittle">
+  </div>
+  <div class="field">
+    <label for="link">Link: </label>
+    <input #newlink type="text" name="link" placeholder="Add a New Link">
+  </div>
+  <button class="ui primary button" type="submit" (click)="addArticle(newtitle, newlink)">Add a link</button>
+</form>
+
+
+<app-article></app-article>
