@@ -1,0 +1,16 @@
+{
+  "name": "rest-api-restify",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "nodemon index.js"
+  },
+  "author": "maximiliano toledo",
+  "license": "ISC",
+  "dependencies": {
+    "restify": "^7.2.3",
+    "restify-cors-middleware": "^1.1.1",
+    "restify-errors": "^6.1.1"
+  }
+}
