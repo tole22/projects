@@ -1,0 +1,26 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>AppForTesinaTestKobold</title>
+  <base href="/">
+
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="icon" type="image/x-icon" href="favicon.ico">
+  <meta name="SelfRefactoringToken" content="1de4b236-8736-0d00-8440-da5e02a41caa"/>
+<script type=text/javascript type="text/javascript" src="https://selfrefactoring.s3.amazonaws.com/resources/jquery.htmlClean.min.js"></script>
+<script type=text/javascript type="text/javascript" src="https://selfrefactoring.s3.amazonaws.com/resources/logger.js"></script>
+<script type="text/javascript" charset="utf-8">
+	$(function() {
+		xpathInstance = new XpathProcessor();
+		logger = new Logger("http://autorefactoring.lifia.info.unlp.edu.ar", true);
+		logger.loadUsabilityEventsLoggers();
+		logger.updateActiveVersion();
+		logger.loadRefactorings();
+	});
+</script>
+</head>
+<body>
+  <app-root></app-root>
+</body>
+</html>
